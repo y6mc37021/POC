@@ -24,7 +24,6 @@ import org.springframework.web.socket.sockjs.client.Transport;
 import org.springframework.web.socket.sockjs.client.WebSocketTransport;
 
 import com.google.gson.Gson;
-import com.service.chat.model.ChatMessage;
 import com.service.chat.model.UserTypingRequest;
 
 @SpringBootTest
@@ -64,16 +63,6 @@ class ReceiveMessageWhenTyping {
 		}
 		UserTypingRequest type1 = blockingQueue.poll(2, TimeUnit.SECONDS);
 		Assertions.assertEquals("John".concat(message), type1.getUserName());
-		//session.send(WEBSOCKET_CHAT_TYPEING, type);
-		//UserTypingRequest type1 = blockingQueue.poll(5, TimeUnit.SECONDS);
-		//Assertions.assertEquals("John".concat(message), type1.getUserName());
-		
-		
-		
-		//UserTypingRequest recivedMsg = blockingQueue.poll(5, TimeUnit.SECONDS);
-		//Assertions.assertEquals("John".concat(message), recivedMsg.getUserName());
-		
-		
 	}
 	
 	class DefaultStompFrameHandler implements StompFrameHandler {

@@ -33,8 +33,6 @@ class SendRecieveMessagesTest {
 	static final String WEBSOCKET_URI = "http://localhost:8080";
 	static final String WEBSOCKET_TOPIC = "/topic/public";
 	static final String WEBSOCKET_CHAT_SEND = "/app/sendMessage";
-	static final String WEBSOCKET_CHAT_LEAVE = "/app/leaveRoom";
-	static final String WEBSOCKET_CHAT_TYPEING = "/app/userTyping";
 	static final String WEBSOCKET_WS = "/ws";
 	static final String TYPING_MESSAGE = " is typing...";
 

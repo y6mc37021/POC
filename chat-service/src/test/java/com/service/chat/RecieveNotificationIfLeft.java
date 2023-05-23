@@ -25,16 +25,13 @@ import org.springframework.web.socket.sockjs.client.WebSocketTransport;
 
 import com.google.gson.Gson;
 import com.service.chat.model.ChatMessage;
-import com.service.chat.model.UserTypingRequest;
 
 @SpringBootTest
 class RecieveNotificationIfLeft {
 	
 	static final String WEBSOCKET_URI = "http://localhost:8080";
 	static final String WEBSOCKET_TOPIC = "/topic/public";
-	static final String WEBSOCKET_CHAT_SEND = "/app/sendMessage";
 	static final String WEBSOCKET_CHAT_LEAVE = "/app/leaveRoom";
-	static final String WEBSOCKET_CHAT_TYPEING = "/app/userTyping";
 	static final String WEBSOCKET_WS = "/ws";
 	static final  String message = " is typing...";
 

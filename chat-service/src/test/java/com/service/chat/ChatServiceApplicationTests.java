@@ -29,17 +29,8 @@ import com.service.chat.model.UserTypingRequest;
 
 @SpringBootTest
 class ChatServiceApplicationTests {
-
-	/*@Test
-	void contextLoads() {
-	}
 	
-	@Test
-	public void booleanTest() {
-		Assertions.assertEquals("true",new String("true"));
-	}*/
-	
-	
+	/* Not To Be Used*/
 	static final String WEBSOCKET_URI = "http://localhost:8080";
 	static final String WEBSOCKET_TOPIC = "/topic/public";
 	static final String WEBSOCKET_CHAT_SEND = "/app/sendMessage";
@@ -90,7 +81,7 @@ class ChatServiceApplicationTests {
         chatMessage.setType(ChatMessage.MessageType.LEAVE);
         chatMessage.setSender("John");
         session.send(WEBSOCKET_CHAT_LEAVE, chatMessage);
-		Assertions.assertEquals(ChatMessage.MessageType.LEAVE, blockingQueue.poll(5, TimeUnit.SECONDS).getType().LEAVE);
+		Assertions.assertEquals(ChatMessage.MessageType.LEAVE, blockingQueue.poll(5, TimeUnit.SECONDS).getType());
 	}
 	
 	@Test
