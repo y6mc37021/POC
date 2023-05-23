@@ -18,6 +18,15 @@ If a users gets disconnected the same will be broadcasted to all the users.
 
 How to Run :
 ChatServiceApplication --> Run as Java Applicaiton 
+Once the Server is Up
+
+Browser - http:/localhost:8080
+or 
+The below test classes could be used to run individually 
+ReceiveMessageWhenTyping
+RecieveNotificationIfLeft
+SendRecieveMessagesTest
+
 
 
 
